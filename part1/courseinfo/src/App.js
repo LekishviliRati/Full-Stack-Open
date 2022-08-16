@@ -28,21 +28,24 @@ const Header = (props) => {
 
   return (
     <div>
-      <p> Header name : {props.course} </p>
+      <p> Name of the course : {props.course} </p>
     </div>
   )
 }
 
 const Content = () => {
   const part1 = 'Fundamentals of React'
+  const exercises1 = 10
   const part2 = 'Using props to pass data'
+  const exercises2 = 7
   const part3 = 'State of a component'
+  const exercises3 = 14
 
   return (
     <div>
-      <p> Name of part1 : {part1} </p>
-      <p> Name of part2 : {part2} </p>
-      <p> Name of part3 : {part3} </p>
+      <p> Name of part1 : {part1}. Number of exercises : {exercises1} </p>
+      <p> Name of part2 : {part2}. Number of exercises : {exercises2}</p>
+      <p> Name of part3 : {part3}. Number of exercises : {exercises3}</p>
     </div>
   )
 
