@@ -2,16 +2,21 @@ import { useState } from 'react'
 
 // a proper place to define a component
 const Statistics = (props) => {
+  if (props.good, props.neutral, props.bad) {
+    return(
+      <div> 
+        <p> <h2> Statistics </h2> </p>
+        <p> Good : {props.good} </p>
+        <p> Neutral : {props.neutral} </p>
+        <p> Bad : {props.bad} </p>
+        <p> Total of feedbacks : {props.total} </p>
+        <p> Average : {props.averageTotal / props.total} </p>
+        <p> Positive : {props.good*100/props.total} </p>
+      </div>
+    )
+  }
   return(
-    <div> 
-      <p> <h2> Statistics </h2> </p>
-      <p> Good : {props.good} </p>
-      <p> Neutral : {props.neutral} </p>
-      <p> Bad : {props.bad} </p>
-      <p> Total of feedbacks : {props.total} </p>
-      <p> Average : {props.averageTotal / props.total} </p>
-      <p> Positive : {props.good*100/props.total} </p>
-    </div>
+    <div> No Feedback </div>
   )
 }
 
