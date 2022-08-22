@@ -1,5 +1,21 @@
 import { useState } from 'react'
 
+// a proper place to define a component
+const Statistics = (props) => {
+  return(
+    <div> 
+      <p> <h2> Statistics </h2> </p>
+      <p> Good : {props.good} </p>
+      <p> Neutral : {props.neutral} </p>
+      <p> Bad : {props.bad} </p>
+      <p> Total of feedbacks : {props.total} </p>
+      <p> Average : {props.averageTotal / props.total} </p>
+      <p> Positive : {props.good*100/props.total} </p>
+    </div>
+  )
+}
+
+
 const App = () => {
   // save clicks of each button to its own state
   const [good, setGood] = useState(0)
@@ -37,13 +53,13 @@ const App = () => {
         Bad
       </button>
       </p>
-      <p> <h2>Statistics </h2> </p>
-      <p> Good : {good} </p>
-      <p> Neutral : {neutral} </p>
-      <p> Bad : {bad} </p>
-      <p> Total : {total} </p>
-      <p> Average : {averageTotal / total} </p>
-      <p> Positive : {good*100/total} </p>
+      <Statistics 
+      good={good} 
+      neutral={neutral}
+      bad={bad}
+      total={total}
+      averageTotal={averageTotal}
+      />
     </div>
   )
 }
