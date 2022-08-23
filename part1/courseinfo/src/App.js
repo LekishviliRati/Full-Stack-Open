@@ -2,7 +2,7 @@ import { useState } from 'react'
 
 // a proper place to define a component
 const Statistics = (props) => {
-  if (props.good, props.neutral, props.bad) {
+  if (props.total) {
     return(
       <div> 
         <p> <h2> Statistics </h2> </p>
